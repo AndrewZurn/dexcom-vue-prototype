@@ -4,6 +4,7 @@
   "App.nav.counter": "Zähler",
   "App.nav.docs": "Dokumentation",
   "App.nav.home": "Startseite",
+  "App.nav.supportForm": "Unterstützung",
   "components.autocomplete.emptyMessage": "Keine Einträge für %s gefunden.",
   "components.calendar.friday.short": "F",
   "components.calendar.monday.short": "M",

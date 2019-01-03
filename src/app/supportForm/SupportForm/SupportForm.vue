@@ -114,8 +114,8 @@
           category: '',
           subject: '',
           description: '',
+          diabetesKnowledge: '',
           apiKnowledge: '',
-          diabetesKnowledge: ''
         },
         categoryOptions: [
           { label: 'Account Management', value: 'account-management' },

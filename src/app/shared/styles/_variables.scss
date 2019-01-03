@@ -96,7 +96,7 @@ $nav-bar-index: 1000;
 $nav-bar-bg-transition: opacity $transition-duration ease-in-out;
 $nav-bar-bg-accent-transition: transform $transition-duration ease-in-out;
 $nav-bar-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-$nav-bar-accent-bg: linear-gradient(to left, $brand-dark-primary 0%, $brand-primary 100%);
+$nav-bar-accent-bg: linear-gradient(to right, $bg-color 0%, $brand-primary 140%);
 $nav-bar-accent-shadow: $nav-bar-shadow;
 $nav-bar-hamburger-bg: $divider-color;
 $nav-bar-menu-border-color: darken($bg-color, 5%);

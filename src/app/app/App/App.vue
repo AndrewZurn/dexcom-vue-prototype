@@ -7,10 +7,10 @@
     <vue-nav-bar>
       <ul :class="$style.nav">
         <li>
-          <a href="/docs" @click.native="navBarClose">
-            <vue-icon-book />
-            <small>{{ $t('App.nav.docs' /* Documentation */) }}</small>
-          </a>
+          <router-link to="/supportForm" @click.native="navBarClose">
+            <vue-icon-search />
+            <small>{{ $t('App.nav.supportForm' /* Support */) }}</small>
+          </router-link>
         </li>
         <li>
           <router-link to="/counter" @click.native="navBarClose">
@@ -34,18 +34,6 @@
           <a @click="localeSwitch('de')">
             <vue-icon-flag />
             <small>Deutsch</small>
-          </a>
-        </li>
-        <li>
-          <a @click="localeSwitch('pt')">
-            <vue-icon-flag />
-            <small>Português</small>
-          </a>
-        </li>
-        <li>
-          <a @click="localeSwitch('zh-cn')">
-            <vue-icon-flag />
-            <small>中文</small>
           </a>
         </li>
       </ul>
@@ -73,6 +61,7 @@
   import VueFooter                  from '../../shared/components/VueFooter/VueFooter.vue';
   import VueNotificationStack       from '../../shared/components/VueNotificationStack/VueNotificationStack.vue';
   import VueCookieConsent           from '../../shared/components/VueCookieConsent/VueCookieConsent.vue';
+  import VueIconSearch              from '../../shared/components/icons/VueIconSearch/VueIconSearch.vue';
   import VueIconBook                from '../../shared/components/icons/VueIconBook/VueIconBook.vue';
   import VueIconHashtag             from '../../shared/components/icons/VueIconHashtag/VueIconHashtag.vue';
   import VueIconPuzzlePiece         from '../../shared/components/icons/VueIconPuzzlePiece/VueIconPuzzlePiece.vue';
@@ -88,6 +77,7 @@
       VueIconPuzzlePiece,
       VueIconHashtag,
       VueIconBook,
+      VueIconSearch,
       VueCookieConsent,
       VueNavBar,
       VueGrid,
