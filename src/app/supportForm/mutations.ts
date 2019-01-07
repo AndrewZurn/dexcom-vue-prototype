@@ -6,6 +6,8 @@ export interface ISupportFormMutations {
   SET_DECREMENT_PENDING(state: ISupportFormState, pending: boolean): void;
 
   SET_COUNT(state: ISupportFormState, count: number): void;
+
+  SET_APP_INFO(state: ISupportFormState, appInfo: string): void;
 }
 
 export const SupportFormMutations: ISupportFormMutations = {
@@ -17,5 +19,8 @@ export const SupportFormMutations: ISupportFormMutations = {
   },
   SET_COUNT:             (state: ISupportFormState, count: number) => {
     state.count = count;
+  },
+  SET_APP_INFO:          (state: ISupportFormState, appInfo: string) => {
+    state.appInfo = appInfo;
   },
 };

@@ -48,7 +48,7 @@ describe('SupportForm.vue', () => {
       i18n,
     });
 
-    expect(wrapper.find('h1').text()).toBe('SupportForm');
+    expect(wrapper.find('h1').text()).toBe('Support Requests');
   });
 
   test('should increment and decrement', () => {

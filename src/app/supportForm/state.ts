@@ -2,6 +2,7 @@ export interface ISupportFormState {
   incrementPending: boolean;
   decrementPending: boolean;
   count: number;
+  appInfo: string;
 }
 
 export const SupportFormDefaultState = (): ISupportFormState => {
@@ -9,5 +10,6 @@ export const SupportFormDefaultState = (): ISupportFormState => {
     incrementPending: false,
     decrementPending: false,
     count:            0,
+    appInfo:          '',
   };
 };

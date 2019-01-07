@@ -8,13 +8,29 @@ export interface ISupportFormResponse {
   count: number;
 }
 
+export interface ISupportFormTextResponse {
+  text: string;
+}
+
 export interface ISupportFormActions {
+  getInfo(context: ActionContext<ISupportFormState, IState>): Promise<any>;
+
   increment(context: ActionContext<ISupportFormState, IState>): Promise<any>;
 
   decrement(context: ActionContext<ISupportFormState, IState>): Promise<any>;
 }
 
 export const SupportFormActions: ISupportFormActions = {
+  getInfo({ commit, state }: ActionContext<ISupportFormState, IState>): Promise<any> {
+    commit('SET_APP_INFO_LOADING', true);
+
+    return HttpService.get('https://api.dexcom.com/info')
+      .then((res: AxiosResponse<ISupportFormResponse>) => {
+        commit('SET_APP_INFO_LOADING', false);
+        commit('SET_APP_INFO', res.data);
+      })
+      .catch(() => commit('SET_APP_INFO_LOADING', false));
+  },
   increment({ commit, state }: ActionContext<ISupportFormState, IState>): Promise<any> {
     commit('SET_INCREMENT_PENDING', true);
 

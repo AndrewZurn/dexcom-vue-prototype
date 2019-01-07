@@ -30,8 +30,8 @@ const clientConfig = merge(baseConfig, {
   },
   performance:  {
     hints:             'warning',
-    maxEntrypointSize: 318000,
-    maxAssetSize:      267000,
+    maxEntrypointSize: 318000 * 2,
+    maxAssetSize:      267000 * 2,
   },
   plugins:      [
     new webpack.DefinePlugin({ CLIENT: true, SERVER: false }),

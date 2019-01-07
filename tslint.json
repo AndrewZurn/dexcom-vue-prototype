@@ -9,6 +9,8 @@
     ]
   },
   "rules": {
+    "no-console": false,
+    "no-debugger": false,
     "quotemark": [
       true,
       "single"
